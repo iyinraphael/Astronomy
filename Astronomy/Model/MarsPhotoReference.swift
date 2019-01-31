@@ -9,6 +9,7 @@
 import Foundation
 
 struct MarsPhotoReference: Codable {
+
     let id: Int
     let sol: Int
     let camera: Camera
