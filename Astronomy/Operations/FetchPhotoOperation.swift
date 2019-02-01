@@ -20,7 +20,7 @@ class FetchPhotoOperation: ConcurrentOperation {
     
     override func start() {
         self.state = .isExecuting
-        let dataTasksmall = URLSession.shared.dataTask(with: photoReference.imageURL) { (data, _, error) in
+        let dataTasksmall = URLSession.shared.dataTask(with: photoReference.imageURL.usingHTTPS!) { (data, _, error) in
             if let error = error {
                 NSLog("Error occured iin url \(error)")
                 return
